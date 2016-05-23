@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+ <!--  <servlet>
+    <servlet-name>greetingservice</servlet-name>
+    <servlet-class>com.cura.pavan.hibernate.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>greetingservice</servlet-name>
+    <url-pattern>/basic_hibernate/greetingservice</url-pattern>
+  </servlet-mapping> -->
+
+
+<servlet>
+ <servlet-name>springGwtRemoteServiceServlet</servlet-name>
+ <servlet-class>org.spring4gwt.server.SpringGwtRemoteServiceServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+ <servlet-name>springGwtRemoteServiceServlet</servlet-name>
+ <url-pattern>/basic_hibernate/springsss/*</url-pattern>
+</servlet-mapping>
+
+    
+
+<listener>
+ <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>Basic_hibernate.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>
